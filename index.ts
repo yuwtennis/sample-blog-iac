@@ -17,13 +17,13 @@ async function main() {
     }
     const aws_account_id = openEnv.values?.dev.account;
 
-    console.log(`Deploying stack for ${pulumi.getStack()}`)
+    //console.log(`Deploying stack for ${pulumi.getStack()}`)
 
-    const builder = new SampleBlogDirector(
-        aws_account_id,
-        orgName,
-        projName)
-    builder.create(Env[pulumi.getStack() as keyof typeof Env]);
+    //const builder = new SampleBlogDirector(
+    //    aws_account_id,
+    //    orgName,
+    //    projName)
+    //builder.create(Env[pulumi.getStack() as keyof typeof Env]);
 }
 
 (async () => {await main()})();
